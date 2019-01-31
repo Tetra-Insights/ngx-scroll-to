@@ -21,7 +21,8 @@
     "start": "ng serve",
     "tags": "npm dist-tag ls @nicky-lenaers/ngx-scroll-to",
     "test": "ng test --single-run=true",
-    "test:watch": "ng test --single-run=false"
+    "test:watch": "ng test --single-run=false",
+    "install": "npm run package"
   },
   "private": false,
   "keywords": [
