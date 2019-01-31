@@ -93,7 +93,7 @@ export class ScrollToService {
       ...options
     } as ScrollToConfigOptionsTarget;
 
-    if (this._animation) this._animation.stop();
+    if (this._animation && options.stopPrevious) this._animation.stop();
 
     const targetNode = this._getNode(mergedConfigOptions.target);
     if (mergedConfigOptions.target && !targetNode) return throwError('Unable to find Target Element');
