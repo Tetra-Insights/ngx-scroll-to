@@ -11,7 +11,7 @@ export const DEFAULTS: ScrollToDefaultConfigOptions = {
   easing: 'easeInOutQuad',
   offset: 0,
   offsetMap: new Map(),
-  stopPrevious: true,
+  stopParallelScrolling: true,
 };
 
 /** Easing Colleciton */

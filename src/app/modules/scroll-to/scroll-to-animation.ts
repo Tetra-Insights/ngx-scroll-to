@@ -138,8 +138,10 @@ export class ScrollToAnimation {
    * @returns               Void
    */
   public stop(): void {
-    clearInterval(this._interval);
-    this._interval = null;
-    this._source$.complete();
+    if (this._interval) {
+      clearInterval(this._interval);
+      this._interval = null;
+      this._source$.complete();
+    }
   }
 }

@@ -33,8 +33,8 @@ export interface ScrollToConfigOptionsBase {
   easing?: ScrollToAnimationEasing;
   /** A mapped list of offsets */
   offsetMap?: ScrollToOffsetMap;
-  /** Flag indicating if previous animation should be stopped */
-  stopPrevious?: boolean;
+  /** Flag indicating if parallel animations should be stopped */
+  stopParallelScrolling?: boolean;
 }
 
 /** Configuration Options Target */

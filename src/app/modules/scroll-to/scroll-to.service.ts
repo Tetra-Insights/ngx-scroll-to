@@ -36,7 +36,7 @@ export class ScrollToService {
    * allows for usage of e.g. `start` and `stop`
    * methods within this Angular Service.
    */
-  private _animation: ScrollToAnimation;
+  private _lastAnimation: ScrollToAnimation;
 
   /**
    * Interruptive Events allow to scrolling animation
@@ -44,6 +44,15 @@ export class ScrollToService {
    * of Interruptive Events represents those.
    */
   private _interruptiveEvents: string[];
+
+  /**
+   * Since stopParallelScrolling option allow parallel scrolling
+   * for multiple elements. It is necessary to detect
+   * when a scrolling animation will be executed on an
+   * element that is being scrolled in order to pause
+   * previous scroll.
+   */
+  private _animationMap = new Map<HTMLElement, ScrollToAnimation>();
 
   /**
    * Construct and setup required paratemeters.
@@ -93,13 +102,23 @@ export class ScrollToService {
       ...options
     } as ScrollToConfigOptionsTarget;
 
-    if (this._animation && options.stopPrevious) this._animation.stop();
+    if (this._lastAnimation && options.stopParallelScrolling) {
+      this._lastAnimation.stop();
+      this._animationMap.forEach((anim, target) => {
+        anim.stop();
+      });
+      this._animationMap.clear();
+    }
 
     const targetNode = this._getNode(mergedConfigOptions.target);
     if (mergedConfigOptions.target && !targetNode) return throwError('Unable to find Target Element');
 
     const container: HTMLElement = this._getContainer(mergedConfigOptions, targetNode);
     if (mergedConfigOptions.container && !container) return throwError('Unable to find Container Element');
+
+    if (mergedConfigOptions.target && this._animationMap.has(targetNode)) {
+      this._animationMap.get(targetNode).stop();
+    }
 
     const listenerTarget = this._getListenerTarget(container) || window;
 
@@ -110,7 +129,7 @@ export class ScrollToService {
     }
 
     // Create Animation
-    this._animation = new ScrollToAnimation(
+    this._lastAnimation = new ScrollToAnimation(
       container,
       listenerTarget,
       isWindow(listenerTarget),
@@ -118,11 +137,15 @@ export class ScrollToService {
       mergedConfigOptions,
       isPlatformBrowser(this._platformId)
     );
-    const onInterrupt = () => this._animation.stop();
+    const onInterrupt = () => this._lastAnimation.stop();
     this._addInterruptiveEventListeners(listenerTarget, onInterrupt);
 
+    if (mergedConfigOptions.target) {
+      this._animationMap.set(targetNode, this._lastAnimation);
+    }
+
     // Start Animation
-    const animation$ = this._animation.start();
+    const animation$ = this._lastAnimation.start();
     this._subscribeToAnimation(animation$, listenerTarget, onInterrupt);
 
     return animation$;
