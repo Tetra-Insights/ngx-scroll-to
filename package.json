@@ -22,7 +22,8 @@
     "tags": "npm dist-tag ls @nicky-lenaers/ngx-scroll-to",
     "test": "ng test --single-run=true",
     "test:watch": "ng test --single-run=false",
-    "install": "npm run package"
+    "dist": "ngc -p src/app/modules/scroll-to",
+    "install": "npm run dist"
   },
   "private": false,
   "keywords": [
@@ -109,5 +110,6 @@
     "tslint": "^5.11.0",
     "typescript": "^2.4.2",
     "zone.js": "^0.8.26"
-  }
+  },
+  "files": ["src/app/modules/scroll-to/*"]
 }
