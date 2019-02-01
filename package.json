@@ -111,5 +111,5 @@
     "typescript": "^2.4.2",
     "zone.js": "^0.8.26"
   },
-  "files": ["src/app/modules/scroll-to/*"]
+  "files": ["src/app/modules/scroll-to/*", "public-api.ts"]
 }

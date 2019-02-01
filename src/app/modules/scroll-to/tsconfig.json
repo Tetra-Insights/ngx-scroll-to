@@ -13,6 +13,7 @@
       "../../../../node_modules/@types"
     ]
   },
+  "include": ["./", "../../../../public_api.ts"],
   "exclude": ["test", "*.spec.ts"],
   "angularCompilerOptions": {
     "genDir": "../../../../aot"
