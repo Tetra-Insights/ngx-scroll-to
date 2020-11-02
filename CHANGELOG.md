@@ -1,3 +1,89 @@
+<a name="9.0.0"></a>
+# [9.0.0](https://github.com/nicky-lenaers/ngx-scroll-to/compare/3.0.1...9.0.0) (2020-04-22)
+
+
+### Bug Fixes
+
+* scroll to element with relative positioned parent ([#124](https://github.com/nicky-lenaers/ngx-scroll-to/issues/124)) ([4d2c775](https://github.com/nicky-lenaers/ngx-scroll-to/commit/4d2c775))
+
+
+### Features
+
+* **lib:** support for angular v9 ([4b50770](https://github.com/nicky-lenaers/ngx-scroll-to/commit/4b50770))
+
+
+### BREAKING CHANGES
+
+* **lib:** Rename properties to follow angular style guide
+
+Before:
+
+[ngx-scroll-to]
+[ngx-scroll-to-event]
+[ngx-scroll-to-duration]
+[ngx-scroll-to-easing]
+[ngx-scroll-to-offset]
+[ngx-scroll-to-offset-map]
+
+After:
+
+[ngxScrollTo]
+[ngxScrollToEvent]
+[ngxScrollToDuration]
+[ngxScrollToEasing]
+[ngxScrollToOffset]
+[ngxScrollToOffsetMap]
+
+* **core:** Fix lint
+
+
+
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/nicky-lenaers/ngx-scroll-to/compare/3.0.0...3.0.1) (2019-08-13)
+
+
+### Bug Fixes
+
+* incorrect package version ([abd2e97](https://github.com/nicky-lenaers/ngx-scroll-to/commit/abd2e97))
+
+
+
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/nicky-lenaers/ngx-scroll-to/compare/2.0.0...3.0.0) (2019-08-13)
+
+
+### Bug Fixes
+
+* failing install due to locked deps ([214d57e](https://github.com/nicky-lenaers/ngx-scroll-to/commit/214d57e))
+* **lib:** replace "... from 'rjx/index'" import by "...from 'rxjs'" ([#115](https://github.com/nicky-lenaers/ngx-scroll-to/issues/115)) ([452a986](https://github.com/nicky-lenaers/ngx-scroll-to/commit/452a986))
+
+
+### Features
+
+* update to angular 8 ([#123](https://github.com/nicky-lenaers/ngx-scroll-to/issues/123)) ([8d0e337](https://github.com/nicky-lenaers/ngx-scroll-to/commit/8d0e337))
+
+
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/nicky-lenaers/ngx-scroll-to/compare/1.1.1...2.0.0) (2018-12-12)
+
+
+### Features
+
+* **lib:** support for angular v7 ([#114](https://github.com/nicky-lenaers/ngx-scroll-to/issues/114)) ([5b9cb85](https://github.com/nicky-lenaers/ngx-scroll-to/commit/5b9cb85))
+
+
+
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/nicky-lenaers/ngx-scroll-to/compare/1.1.0...1.1.1) (2018-09-12)
+
+
+### Bug Fixes
+
+* include src in npm packages ([1e44246](https://github.com/nicky-lenaers/ngx-scroll-to/commit/1e44246))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/nicky-lenaers/ngx-scroll-to/compare/1.0.0...1.1.0) (2018-09-11)
 
