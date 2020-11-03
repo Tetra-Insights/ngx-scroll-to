@@ -19,7 +19,8 @@
     "lib:package": "yarn build --prod && yarn copy:readme && cd ./dist/ngx-scroll-to && yarn pack",
     "prelib:publish": "yarn lib:package",
     "lib:publish": "cd ./dist/ngx-scroll-to && yarn publish --access=public",
-    "tags": "yarn tag list @nicky-lenaers/ngx-scroll-to"
+    "tags": "yarn tag list @nicky-lenaers/ngx-scroll-to",
+    "install": "yarn run build"
   },
   "private": false,
   "contributors": [
