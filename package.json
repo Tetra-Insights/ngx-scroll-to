@@ -1,7 +1,7 @@
 {
   "name": "@tetrainsights/ngx-scroll-to-demo",
   "description": "A fork of @nicky-lenaers/ngx-scroll-to package.",
-  "version": "9.1.1",
+  "version": "9.1.2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -22,6 +22,7 @@
     "lib:publish": "cd ./dist/ngx-scroll-to && yarn publish --access=public",
     "tags": "yarn tag list @nicky-lenaers/ngx-scroll-to"
   },
+  
   "private": false,
   "repository": {
     "type": "git",
