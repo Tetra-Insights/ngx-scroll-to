@@ -1,7 +1,7 @@
 {
-  "name": "@nicky-lenaers/ngx-scroll-to",
+  "name": "@tetrainsights/ngx-scroll-to",
   "description": "A simple Angular 4+ plugin enabling you to smooth scroll to any element on your page and enhance scroll-based features in your app.",
-  "version": "9.0.0",
+  "version": "9.1.1",
   "license": "MIT",
   "private": false,
   "keywords": [
@@ -32,22 +32,9 @@
     "angular9",
     "angular 9"
   ],
-  "author": {
-    "name": "Nicky Lenaers",
-    "email": "nicky@newgameplus.online"
-  },
-  "contributors": [
-    {
-      "name": "Robbert van Caem"
-    }
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicky-lenaers/ngx-scroll-to.git"
-  },
-  "homepage": "https://github.com/nicky-lenaers/ngx-scroll-to#readme",
-  "bugs": {
-    "url": "https://github.com/nicky-lenaers/ngx-scroll-to/issues"
+    "url": "git+https://github.com/TetraInsights/ngx-scroll-to.git"
   },
   "engines": {
     "node": ">=8.0.0",
